@@ -48,3 +48,13 @@ def comment(author, news):
 @pytest.fixture
 def comment_id_for_args(comment):
     return (comment.id,)
+
+
+# Добавляем фикстуру form_data
+@pytest.fixture
+def form_data():
+    return {
+        'title': 'Новый заголовок',
+        'text': 'Новый текст',
+        'slug': 'new-slug'
+    }
